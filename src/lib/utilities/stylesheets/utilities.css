@@ -1,0 +1,21 @@
+.glass {
+    background: linear-gradient(
+        15deg,
+        rgba(255, 255, 255, 0.27) 0%,
+        rgba(255, 255, 255, 0.42) 48%,
+        rgba(255, 255, 255, 0.3) 100%
+    );
+    backdrop-filter: saturate(50%) blur(15px);
+    border: 0.5px solid #ffffff50;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}

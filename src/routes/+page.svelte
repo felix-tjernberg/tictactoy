@@ -16,3 +16,9 @@
     </label>
     <button type="submit">Start game</button>
 </form>
+
+<style>
+    form {
+        display: grid;
+    }
+</style>
