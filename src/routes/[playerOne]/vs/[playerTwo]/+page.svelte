@@ -1,10 +1,12 @@
 <script lang="ts">
     import { page } from '$app/stores'
-    import GameInfo from '$components/GameInfo.svelte'
-    import PlayField from '$components/PlayField.svelte'
-    import GameDone from '$components/GameDone.svelte'
 
     import newGameState from '$utilities/newGameState'
+
+    import GameDone from '$components/GameDone.svelte'
+    import GameInfo from '$components/GameInfo.svelte'
+
+    import PlayField from '$compositions/PlayField.svelte'
 
     let gameState = $page.url.searchParams.get('gameState') || newGameState()
 

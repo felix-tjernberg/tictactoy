@@ -1,4 +1,6 @@
 <script lang="ts">
+    import Square from '$components/Square.svelte'
+
     export let gameState: string
     export let playerTurn: string
 
@@ -19,14 +21,12 @@
 
 <form method="GET" on:submit|preventDefault>
     {#each [1, 2, 3, 4, 5, 6, 7, 8, 9] as squareNumber}
-        <button
+        <Square
             disabled={gameState[squareNumber] !== '-'}
+            label={gameState[squareNumber]}
             name="gameState"
             on:click={() => (gameState = updateGameState(squareNumber))}
-            value={updateGameState(squareNumber)}>
-            <!-- TODO: add visually hidden language and make visual value be aria ignore with a span -->
-            {gameState[squareNumber]}
-        </button>
+            value={updateGameState(squareNumber)} />
     {/each}
 </form>
 
