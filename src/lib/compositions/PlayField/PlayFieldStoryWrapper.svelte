@@ -8,4 +8,4 @@
 </script>
 
 <p class="visually-hidden" data-testid="gameState">{gameState}</p>
-<PlayField bind:gameState bind:playerTurn />
+<PlayField />
