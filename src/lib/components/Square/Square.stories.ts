@@ -65,3 +65,18 @@ Story3.play = async ({ canvasElement }) => {
     expect(square.name).toBe(story3name)
     expect(square.value).toBe(story3value)
 }
+
+const story4label = 'I be hover label'
+export const Story4: Story = {
+    args: {
+        hoverLabel: story4label,
+    },
+}
+Story4.storyName = 'Hover Story'
+Story4.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const square = canvas.getByRole('button') as HTMLButtonElement
+    const hoverLabel = canvas.getByTestId('hover-label') as HTMLSpanElement
+    await userEvent.hover(square)
+    await expect(hoverLabel.textContent).toBe(story4label)
+}
