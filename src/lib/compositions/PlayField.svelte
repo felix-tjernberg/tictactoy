@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Square from '$components/Square.svelte'
+    import Square from '$components/Square/Square.svelte'
 
     export let gameState: string
     export let playerTurn: string

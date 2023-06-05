@@ -71,7 +71,7 @@ This is a sample project to showcase SvelteKit features, how to setup SvelteKit,
 
 1. `pnpm add --save-dev @storybook/addon-a11y`
 2. add following to addons in main.test '@storybook/addon-a11y'
-3. `pnpm add --save-dev @storybook/test-runner` (takes long time because of install script that runs)
+3. `pnpm add --save-dev @storybook/jest @storybook/test-runner` (takes long time because of install script that runs)
 4. add following to package.json
 
     ```json
