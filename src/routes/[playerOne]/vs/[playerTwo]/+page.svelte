@@ -6,7 +6,7 @@
     import GameDone from '$components/GameDone.svelte'
     import GameInfo from '$components/GameInfo.svelte'
 
-    import PlayField from '$compositions/PlayField.svelte'
+    import PlayField from '$compositions/PlayField/PlayField.svelte'
 
     let gameState = $page.url.searchParams.get('gameState') || newGameState()
 
