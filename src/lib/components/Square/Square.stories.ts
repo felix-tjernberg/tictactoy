@@ -77,6 +77,21 @@ Story4.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const square = canvas.getByRole('button') as HTMLButtonElement
     const hoverLabel = canvas.getByTestId('hover-label') as HTMLSpanElement
+    //TODO if using something other that opacity, update style checks accordingly
+    await expect(hoverLabel.style.opacity).toBe(0)
     await userEvent.hover(square)
-    await expect(hoverLabel.textContent).toBe(story4label)
+    await expect(hoverLabel.style.opacity).toBe(1)
+}
+
+const story5label = 'Accessibility label'
+export const Story5: Story = {
+    args: {
+        hoverLabel: story5label,
+    },
+}
+Story5.storyName = 'Accesibility Story'
+Story5.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const accessibilityLabel = canvas.getByTestId('accesibility-label') as HTMLSpanElement
+    await expect(accessibilityLabel.textContent).toBe(story5label)
 }
