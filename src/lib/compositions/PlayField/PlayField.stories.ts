@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { expect, jest } from '@storybook/jest'
+import { expect } from '@storybook/jest'
 import { within, userEvent } from '@storybook/testing-library'
 
 import PlayField from './PlayFieldStoryWrapper.svelte'
